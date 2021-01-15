@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="card bg-dark" *ngIf="course">
+      <div class="card-body bg-dark">
+        <h4><span class="badge text-warning">
+          ID : {{course.businessId}} -- NAME : {{ course.businessName }}
+        </span></h4>
+        <div class="input-group ">
+          <label for="exampleFormControlTextarea1" class="form-label text-white ">Katılımcı Sayısı</label>
+          <input #add type="text" [(ngModel)]="course.attend" class="bd-highlight h-25 d-inline-block">
+        </div>
+        <div class="mb-3">
+          <nz-label for="exampleFormControlTextarea1" class="form-label text-white ">Description</nz-label>
+          <textarea class="form-control bd-highlight" [(ngModel)]=" course.description" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+          <label class="form-check-label text-white" for="flexCheckChecked">
+            Kurs Öğrenci Katılımına açık
+          </label>
+        <div class="input-group-attend">
+          <button (click)="add(add.value)"  class="btn btn-outline-warning btn-radius float-end">Kaydet</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
