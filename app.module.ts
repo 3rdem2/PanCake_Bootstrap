@@ -6,12 +6,15 @@ import { DataComponent } from './data/data.component';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { FormsModule } from '@angular/forms';
 import { CardComponent } from './card/card.component';
+import { SummaryPipe } from './summary.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     DataComponent,
-    CardComponent
+    CardComponent,
+    SummaryPipe 
+   
   ],
   imports: [
     BrowserModule,
