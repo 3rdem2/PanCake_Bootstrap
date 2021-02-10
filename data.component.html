@@ -23,7 +23,7 @@
           <td>{{data.sessionDate | shortDate }}</td>
           <td>{{data.listPrice}}</td>
           <td>{{data.discountedPrice}}</td>
-          <td>{{data.description | summary }}</td>
+          <td>{{data.description | summary : 15 }}</td>
           <td>{{data.attend}}</td>
           <td> <button (click)="onEdit(data)" data-toggle="tooltip" [class.active]="data===selectedData"
             class="btn btn-secondary active" type="button">Düzenle</button> </td>
